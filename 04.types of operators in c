@@ -1,0 +1,150 @@
+🔧 C Programming Operators
+
+
+1️⃣ Arithmetic Operators ➕➖✖️➗
+📌 Used for basic mathematical operations.
+
+Operator	  Description         	Example
++	           Addition           	a + b
+-	           Subtraction	        a - b
+*	           Multiplication	      a * b
+/	           Division	            a / b
+%	          Modulus (Remainder)	  a % b
+
+
+🧪 Example:
+
+int a = 10, b = 3;
+int sum = a + b;        // 13
+int diff = a - b;       // 7
+int prod = a * b;       // 30
+int quot = a / b;       // 3
+int rem = a % b;        // 1
+
+
+
+2️⃣ Relational Operators 🔁
+📌 Used to compare values. Results in true (1) or false (0).
+
+Operator	   Meaning	                 Example
+==	         Equal to                 	x == y
+!=	         Not equal to	              x != y
+>	           Greater than	              x > y
+<	           Less than	                x < y
+>=	         Greater than or equal    	x >= y
+<=	         Less than or equal	        x <= y
+
+
+🧪 Example:
+
+int x = 5, y = 10;
+if (x < y) {
+    // True: Executes this block
+}
+
+
+3️⃣ Logical Operators 🧠
+📌 Combine or invert boolean expressions.
+
+Operator        	Name         	Example
+&&	            Logical AND	     x > 0 && y > 0
+!	              Logical NOT	     !(x > y)
+
+
+🧪 Example:
+if (x > 0 && y > 0) {
+    // Both positive
+}
+
+
+
+4️⃣ Bitwise Operators ⚙️
+📌 Operate on bits directly — used in low-level programming.
+
+Operator        	Operation	     Example
+&	               Bitwise AND	    a & b
+`	`	             Bitwise OR
+^	               Bitwise XOR	    a ^ b
+~	               Bitwise NOT      	~a
+<<	             Left shift      	a << 1
+>>	             Right shift     	a >> 1
+
+
+🧪 Example:
+
+int a = 5, b = 3;
+// Binary: 0101 & 0011 = 0001
+int result = a & b; // 1
+
+
+
+5️⃣ Assignment Operators 📝
+📌 Assign and modify values in one step.
+
+Operator         	Description           	Equivalent To
+=	                 Assignment	             x = 5
++=	               Add and assign         	x = x + 5
+-=	               Subtract and assign     	x = x - 5
+*=	               Multiply and assign	    x = x * 5
+/=	               Divide and assign       	x = x / 5
+%=	               Modulo and assign	      x = x % 5
+
+
+🧪 Example:
+int x = 10;
+x += 5; // x becomes 15
+
+
+6️⃣ Unary Operators ☝️
+📌 Work with a single operand.
+
+Operator	   Meaning
+++	         Increment
+--	         Decrement
++	           Unary Plus
+-	           Unary Minus
+
+
+🧪 Example:
+
+int value = 5;
+value++;   // 6
+--value;   // back to 5
+
+
+
+7️⃣ Ternary Operator ❔
+📌 Shortcut for if-else.
+🔹 Syntax: condition ? true_expr : false_expr;
+🧪 Example:
+int a = 10, b = 20;
+int max = (a > b) ? a : b; // max = 20
+
+
+
+8️⃣ Sizeof Operator 📏
+📌 Returns memory size of a variable/type in bytes.
+🧪 Example:
+int x;
+printf("Size of int: %zu bytes\n", sizeof(x));
+
+
+9️⃣ Comma Operator 🧮
+📌 Used to evaluate multiple expressions in a single statement.
+🧪 Example:
+int x = (1, 2, 3); // x = 3 (last value)
+
+
+🔟 Member Access Operators 🧷
+📌 Used to access members of structures/unions.
+Operator	Description	Usage
+.	Access using object	object.member
+->	Access using pointer to object	ptr->member
+
+🧪 Example:
+
+struct Point { int x; int y; };
+struct Point p1 = {10, 20};
+printf("%d\n", p1.x);       // Dot
+struct Point *ptr = &p1;
+printf("%d\n", ptr->y);     // Arrow
