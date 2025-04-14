@@ -1,1 +1,77 @@
-Introduction to Programming Language
+🔸Introduction to Programming Language
+
+ 👉 Programming - Process of writing instruction (Code) that a computer can understand and execute 
+
+
+🔸 TYPES OF PROGRAMMING LANGUAGE
+1.Machine Language - Low Level language, consisting of binary( 0 and 1) ,directly understand by CPU but difficult to read and write.
+2.Assemble Language - mnemories (short symbolic code bridge between the machine and high level language.
+3.High Level Language - Human Readable synatx,require a complie/Interpreter to convert code to machine language.
+
+
+
+🔸 PROGRAMMING LANGAUAGE IMPLEMENTATION 
+
+1. Compilation vs. Interpretation (Language Translators)
+Language Translators are programs that convert source code written in one language into another language (usually machine code).
+
+Compiler
+👉 Converts high-level code to machine code before execution.
+👉 Results in a standalone executable.
+💻 Example: C, C++
+
+Interpreter
+👉 Converts high-level code to machine code during execution, line by line.
+👉 No standalone executable; code is executed directly.
+💻 Example: Python, JavaScript
+
+Assembler
+👉 Converts assembly language to machine code.
+👉 Requires a machine-specific assembler.
+💻 Example: Assembly language programs.
+
+
+
+2. Hybrid Approaches - Some languages use a combination of both compilation and interpretation (e.g., Java compiles to bytecode, which is then interpreted by the Java Virtual Machine).
+3. Lexical Analysis and Parsing- The stages involved in compiling and interpreting source code, starting from breaking code into tokens  to building a parse tree.
+4. Execution Models - How the execution model of a language relates to whether it is compiled or interpreted and the implications for performance and development speed.
+5. Error Handling- How compilers and interpreters handle syntax and runtime errors, including error messages and debugging support.
+
+
+ 🔸 Programming Paradigms
+A "programming paradigm"is a way or style of "writing and organizing code". It affects "how problems are approached and solved" using a programming language.
+
+1. 🔁 Procedural Programming 
+   – Code is structured as a sequence of steps or procedures (functions).  
+   – Emphasizes "flow control" (loops, conditionals).  
+   – Example Languages: C, Pascal  
+
+
+2. 🧱 Object-Oriented Programming (OOP)
+   – Code is organized around "objects" (data + behavior).  
+   – Emphasizes encapsulation, inheritance, polymorphism.  
+   – Example Languages: Java, Python, C++  
+
+
+3. 🧬 Functional Programming
+   – Code is written using "pure functions", without changing data (immutability).  
+   – Emphasizes "recursion", "higher-order functions", and "no side effects".  
+   – **Example Languages**: Haskell, Lisp, parts of Python/JavaScript  
+
+
+4. 🧠 Logic Programming 
+   – Based on "facts", "rules", and "queries".  
+   – The computer uses logic to infer answers.  
+   – Example Languages: Prolog  
+ 
+
+5. 🎯 Event-Driven Programming
+   – Code responds to "events" like clicks, input, or messages.  
+   – Common in GUI applications and web development.  
+   – Example Languages: JavaScript, Visual Basic  
+
+
+
+
+
+
