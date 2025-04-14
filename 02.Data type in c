@@ -1,0 +1,84 @@
+🧠 Data Types in C
+Data types define the type and size of data a variable can hold. They are categorized into:
+
+1️⃣ Basic Data Types
+These are the fundamental types built into C.
+
+🔹 int — Integer
+💾 Size: Typically 4 bytes
+🧮 Example:
+int age = 30;
+
+🔹 float — Single-precision Floating Point
+💾 Size: Typically 4 bytes
+💸 Example:
+float salary = 50000.50;
+
+
+🔹 double — Double-precision Floating Point
+💾 Size: Typically 8 bytes
+🧪 Example:
+double pi = 3.14159;
+
+
+🔹 char — Character
+💾 Size: 1 byte
+🔠 Range: -128 to 127 (or 0 to 255 for unsigned char)
+📝 Example:
+char initial = 'A';
+
+
+2️⃣ Derived Data Types
+Built using basic data types.
+
+🔸 array[] — Collection of Same Type
+📦 Example:
+int numbers[10];
+
+
+🔸 *pointer — Memory Address of a Variable
+🎯 Example:
+int *ptr;
+
+
+🔸 struct — Grouping Different Data Types
+📋 Example:
+struct Person {
+    char name[50];
+    int age;
+};
+
+
+🔸 union — Shared Memory Space for All Members
+🧳 Example:
+union Data {
+    int intValue;
+    float floatValue;
+    char charValue;
+};
+
+
+🔸 enum — Named Integer Constants
+📆 Example:
+enum Weekday { Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday };
+
+
+3️⃣ Void Type
+🔸 void — No Return or Parameters
+🚫 Used when no value is returned or passed.
+
+📣 Example:
+void displayMessage() {
+    printf("Hello, World!\n");
+}
+
+
+4️⃣ Type Modifiers
+Used to alter the range or size of basic data types.
+
+🔣 Modifier	              🧾 Meaning                  	🧪 Example
+signed	    Allows positive and negative values	         signed int a = -10;
+unsigned	  Only positive values	                       unsigned int b = 20;
+short     	Smaller range, saves memory	                 short int c = 32767;
+long	      Extended range	                             long int d = 1234567890;
+long        long	Larger than long, used in C99+       	long long int e = 1234567890123456789LL;
