@@ -1,0 +1,54 @@
+📦 Variables in C
+A variable is a named memory location used to store data that can change during program execution.
+
+🛠️ Declaration
+ 👉 Must be declared before use
+ 👉 Requires specifying the data type and variable name
+       int age; // Declaration example
+
+
+🧬 Data Types
+Basic Types: int, float, double, char
+Derived Types: Arrays, Pointers, Structures, Unions, Enumerations
+
+
+🚀 Initialization
+Variables can be initialized at the time of declaration.
+int age = 25; // Declaration with initialization
+
+
+🌐 Scope
+Local Variables
+➤ Declared inside a function
+➤ Accessible only within that function
+
+Global Variables
+➤ Declared outside any function
+➤ Accessible throughout the program
+
+⏳ Lifetime
+Local Variables
+➤ Exist only while the function runs
+
+Global Variables
+➤ Exist for the entire program duration
+
+✍️ Naming Rules
+✅ Must start with a letter or underscore (_)
+✅ Can include letters, digits, and underscores
+❌ No special characters or spaces
+🔠 Case-sensitive → score ≠ Score
+
+✅ Best Practices
+ 👉 Use descriptive names (e.g., totalScore, userName)
+ 👉 Avoid single-letter names (except for loop counters like i, j)
+ 👉 Always initialize variables to avoid garbage values
+ 👉 Use const for read-only values:
+       const int MAX_LIMIT = 100; // Constant variable
+
+
+
+🧠 Memory Storage
+Local Variables → Stored on the stack
+Global / Static / Dynamic Variables → Stored in the heap or data segment
+
