@@ -1,0 +1,148 @@
+⭐⭐⭐⭐⭐⭐⭐ CODECRAFT BY ASHIKA ⭐⭐⭐⭐⭐⭐⭐
+
+🟢 Language ➡ C
+🟢 Topic ➡ Functions
+
+
+🔹 What is a Function in C?
+     👉A function in C is a block of code designed to perform a specific task. It allows for code reuse, better organization, and modularity. Functions help break down complex programs into smaller, manageable chunks of code, making it easier to maintain and understand.
+
+🔸 1. Function Declaration (Prototype)
+    📥 A function declaration tells the compiler about the function's name, return type, and parameters. It gives the compiler the information it needs to call the function correctly.
+
+👉Syntax:
+    return_type function_name(parameter_list);
+👉Example:
+    int add(int, int); 
+
+
+
+
+
+
+🔸 2. Function Definition
+   📥  The function definition provides the actual implementation of the function. It defines the behavior and logic the function should execute.
+
+👉Syntax:
+     return_type function_name(parameter_list) {
+     }
+👉Example:
+    int add(int a, int b) {
+         return a + b; 
+    }
+
+
+
+
+
+
+🔸 3. Function Call
+   📥  To execute a function, you need to call it from another part of the program, usually the main function or another function.
+
+👉Syntax:
+    function_name(argument_list); 
+👉Example:
+    int result = add(5, 3);  
+
+
+
+
+
+
+🔸 4. Function with Parameters (Pass-by-Value)
+    📥 In pass-by-value, the function receives copies of the arguments passed to it, meaning any changes made inside the function do not affect the original values.
+
+Example:
+#include <stdio.h>
+void add(int a, int b) { 
+    int sum = a + b;   
+    printf("Sum: %d\n", sum); 
+}
+int main() {
+    add(5, 10);  
+    return 0;
+}
+
+
+
+
+
+
+
+🔸 5. Function with Return & No Parameters
+    📥 A function can return a value and may not take any parameters.
+
+Example:
+#include <stdio.h>
+int getNumber() { 
+    return 10;  
+}
+int main() {
+    int num = getNumber();  
+    printf("Number: %d\n", num);  
+    return 0;
+}
+
+
+
+
+
+
+
+🔸 6. Function with Return Value
+  📥 A function can return a value after completing its task. The return value is typically captured in a variable in the calling function.
+
+Example:
+
+#include <stdio.h>
+int square(int x) { 
+    return x * x;  
+}
+int main() {
+    int result = square(5);  
+    printf("Square: %d\n", result);  
+    return 0;
+}
+
+
+
+
+
+
+🔸 7. Function without Return Value
+  📥 A function can also not return any value, in which case the return type is void.
+
+Example:
+
+#include <stdio.h>
+void displayMessage() {
+    printf("This function does not return a value.\n");
+}
+int main() {
+    displayMessage(); 
+    return 0;
+}
+
+
+
+
+
+
+🔸 8. Recursive Function
+    📥  A recursive function is one that calls itself. It is usually used to solve problems that can be broken down into smaller, similar problems, like calculating factorials.
+
+Example:
+
+#include <stdio.h>
+int factorial(int n) {
+    if (n == 0) {
+        return 1;  
+    } else {
+        return n * factorial(n - 1);  
+    }
+}
+int main() {
+    int num = 5;
+    printf("Factorial of %d: %d\n", num, factorial(num));  
+    return 0;
+}
