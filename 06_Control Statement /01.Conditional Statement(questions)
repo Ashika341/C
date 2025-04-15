@@ -50,3 +50,11 @@ days in that month.
 distinct, real & equal or imaginary roots.
 
 20. WAP to input two dates from user then print which of the entered date is greater or print same if both are equal.
+
+21. WAP to check whether a given number is divisible by both 2 and 3 but not by 5.
+
+22. WAP to check if a character is a vowel (logical OR usage).
+
+23. WAP to check whether a number lies between 10 and 100 (inclusive) using logical AND.
+
+24. WAP to check whether a year is not a leap year using logical NOT.
