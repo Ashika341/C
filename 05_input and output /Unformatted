@@ -5,6 +5,8 @@
 
 
 📥 Unformatted Input Functions
+
+
 🔸 getchar()
 👉Reads a single character from standard input.
 👉Waits for the Enter key.
