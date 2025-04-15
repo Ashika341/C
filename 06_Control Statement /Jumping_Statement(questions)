@@ -1,0 +1,36 @@
+⭐⭐⭐⭐⭐⭐⭐ CODECRAFT BY ASHIKA ⭐⭐⭐⭐⭐⭐⭐
+
+🟢 Language ➡ C
+🟢 Topic ➡ Jumping Statements (Questions)
+
+Jumping Statements
+
+👉Basic break Statement Usage:
+1.Write a program using a break statement to exit a loop when a certain condition is met (e.g., when a user inputs a negative number).
+
+👉Nested Loops and break:
+2.Write a program with nested loops that prints a multiplication table, and use a break statement to exit from both loops when a specified threshold is reached (e.g., when the product exceeds a certain number).
+
+👉Using continue:
+3.Write a program that prints all even numbers from 1 to 20 but skips the number 10 using a continue statement.
+
+👉goto Statement:
+4.Create a simple program that uses the goto statement to jump to a specific label based on user input validation (e.g., input numbers until the user enters a valid number).
+
+👉Exit Early with break:
+5.Write a program that finds the first prime number in a given range (1 to N) using a loop and exits as soon as it finds the number with a break statement.
+
+👉Skip Iterations with continue:
+6.Write a program that reads integers from the user until 0 is entered and calculates the sum of only the numbers that are odd, skipping even numbers with a continue statement.
+
+👉goto for Error Handling:
+7.Design a program that demonstrates the use of the goto statement for error handling (e.g., validating user input repeatedly until a valid input is provided).
+
+👉Using break in Switch Case:
+8.Write a simple menu-driven program that uses a switch statement, and demonstrate the necessity of break statements to terminate specific case executions.
+
+👉Combining continue and break:
+9.Create a program that counts all numbers between 1 and 50 but skips the multiples of 5. Use both continue to skip and break to end the loop if a certain count is reached.
+
+👉Labeling and goto:
+10.Write a program that demonstrates the use of labeled statements and goto to create a simple menu where the user can choose actions without breaking down into multiple functions.
