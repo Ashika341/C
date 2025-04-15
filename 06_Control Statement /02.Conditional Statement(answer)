@@ -1,1 +1,430 @@
+⭐⭐⭐⭐⭐⭐⭐ CODECRAFT BY ASHIKA ⭐⭐⭐⭐⭐⭐⭐
 
+🟢 Language ➡ C
+🟢 Topic ➡ Conditional Statements Answer
+
+1. WAP to check whether a given number is an even number or an odd number.
+CopyReplit
+#include <stdio.h>
+
+int main() {
+    int number;
+    
+    printf("Enter a number: ");
+    scanf("%d", &number);
+    
+    if (number % 2 == 0) {
+        printf("%d is even.\n", number);
+    } else {
+        printf("%d is odd.\n", number);
+    }
+    
+    return 0;
+}
+2. WAP to check whether a given number is an even number or an odd number without using % operator.
+CopyReplit
+#include <stdio.h>
+
+int main() {
+    int number;
+    
+    printf("Enter a number: ");
+    scanf("%d", &number);
+    
+    if ((number & 1) == 0) {
+        printf("%d is even.\n", number);
+    } else {
+        printf("%d is odd.\n", number);
+    }
+    
+    return 0;
+}
+3. WAP to check whether a given number is divisible by 5 or not.
+CopyReplit
+#include <stdio.h>
+
+int main() {
+    int number;
+    
+    printf("Enter a number: ");
+    scanf("%d", &number);
+    
+    if (number % 5 == 0) {
+        printf("%d is divisible by 5.\n", number);
+    } else {
+        printf("%d is not divisible by 5.\n", number);
+    }
+    
+    return 0;
+}
+4. WAP to check whether a given number is positive or non-positive.
+CopyReplit
+#include <stdio.h>
+
+int main() {
+    int number;
+    
+    printf("Enter a number: ");
+    scanf("%d", &number);
+    
+    if (number > 0) {
+        printf("%d is positive.\n", number);
+    } else {
+        printf("%d is non-positive.\n", number);
+    }
+    
+    return 0;
+}
+5. WAP to check whether a given number is a three-digit number or not.
+CopyReplit
+#include <stdio.h>
+
+int main() {
+    int number;
+    
+    printf("Enter a number: ");
+    scanf("%d", &number);
+    
+    if (number >= 100 && number <= 999) {
+        printf("%d is a three-digit number.\n", number);
+    } else {
+        printf("%d is not a three-digit number.\n", number);
+    }
+    
+    return 0;
+}
+6. WAP to print greater between two numbers. Print one number of both if both are the same.
+CopyReplit
+#include <stdio.h>
+
+int main() {
+    int a, b;
+
+    printf("Enter two numbers: ");
+    scanf("%d %d", &a, &b);
+    
+    if (a > b) {
+        printf("Greater number is: %d\n", a);
+    } else if (b > a) {
+        printf("Greater number is: %d\n", b);
+    } else {
+        printf("Both numbers are the same: %d\n", a);
+    }
+    
+    return 0;
+}
+7. WAP to print greater among three numbers. Print one number of among if two or all are the same.
+CopyReplit
+#include <stdio.h>
+
+int main() {
+    int a, b, c;
+
+    printf("Enter three numbers: ");
+    scanf("%d %d %d", &a, &b, &c);
+    
+    if (a >= b && a >= c) {
+        printf("Greater number is: %d\n", a);
+    } else if (b >= a && b >= c) {
+        printf("Greater number is: %d\n", b);
+    } else {
+        printf("Greater number is: %d\n", c);
+    }
+    
+    return 0;
+}
+8. WAP to check whether a given year is a leap year or not.
+CopyReplit
+#include <stdio.h>
+
+int main() {
+    int year;
+
+    printf("Enter a year: ");
+    scanf("%d", &year);
+    
+    if ((year % 4 == 0 && year % 100 != 0) || (year % 400 == 0)) {
+        printf("%d is a leap year.\n", year);
+    } else {
+        printf("%d is not a leap year.\n", year);
+    }
+    
+    return 0;
+}
+9. WAP which takes the cost price and selling price of a product from the user. Now calculate and print profit or loss percentage.
+CopyReplit
+#include <stdio.h>
+
+int main() {
+    float costPrice, sellingPrice, profitLoss, percentage;
+
+    printf("Enter cost price: ");
+    scanf("%f", &costPrice);
+    printf("Enter selling price: ");
+    scanf("%f", &sellingPrice);
+    
+    profitLoss = sellingPrice - costPrice;
+    percentage = (profitLoss / costPrice) * 100;
+
+    if (profitLoss > 0) {
+        printf("Profit: %.2f, Profit Percentage: %.2f%%\n", profitLoss, percentage);
+    } else if (profitLoss < 0) {
+        printf("Loss: %.2f, Loss Percentage: %.2f%%\n", -profitLoss, -percentage);
+    } else {
+        printf("No profit, no loss.\n");
+    }
+
+    return 0;
+}
+10. WAP to input an alphabet from user and check whether the given alphabet is in uppercase or in lowercase.
+CopyReplit
+#include <stdio.h>
+
+int main() {
+    char ch;
+
+    printf("Enter an alphabet: ");
+    scanf(" %c", &ch);
+    
+    if (ch >= 'A' && ch <= 'Z') {
+        printf("%c is uppercase.\n", ch);
+    } else if (ch >= 'a' && ch <= 'z') {
+        printf("%c is lowercase.\n", ch);
+    } else {
+        printf("%c is not an alphabet.\n", ch);
+    }
+
+    return 0;
+}
+11. WAP to take marks of 5 subjects from the user. Assume marks are given out of 100 and passing marks is 33. Now display whether the candidate passed the examination or failed.
+CopyReplit
+#include <stdio.h>
+
+int main() {
+    int marks[5], i, passed = 1;
+
+    printf("Enter marks of 5 subjects:\n");
+    for(i = 0; i < 5; i++) {
+        printf("Subject %d: ", i + 1);
+        scanf("%d", &marks[i]);
+        
+        if (marks[i] < 33) {
+            passed = 0; // Candidate has failed
+        }
+    }
+    
+    if (passed) {
+        printf("Candidate passed the examination.\n");
+    } else {
+        printf("Candidate failed the examination.\n");
+    }
+
+    return 0;
+}
+12. WAP to take an alphabet from user and check whether the given alphabet is a vowel or a consonant.
+CopyReplit
+#include <stdio.h>
+
+int main() {
+    char ch;
+
+    printf("Enter an alphabet: ");
+    scanf(" %c", &ch);
+    
+    if (ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u' ||
+        ch == 'A' || ch == 'E' || ch == 'I' || ch == 'O' || ch == 'U') {
+        printf("%c is a vowel.\n", ch);
+    } else if ((ch >= 'a' && ch <= 'z') || (ch >= 'A' && ch <= 'Z')) {
+        printf("%c is a consonant.\n", ch);
+    } else {
+        printf("%c is not an alphabet.\n", ch);
+    }
+
+    return 0;
+}
+13. WAP to check whether a given number is divisible by 3 and divisible by 2.
+CopyReplit
+#include <stdio.h>
+
+int main() {
+    int number;
+
+    printf("Enter a number: ");
+    scanf("%d", &number);
+    
+    if (number % 3 == 0 && number % 2 == 0) {
+        printf("%d is divisible by both 3 and 2.\n", number);
+    } else {
+        printf("%d is not divisible by both 3 and 2.\n", number);
+    }
+
+    return 0;
+}
+14. WAP to check whether a given number is divisible by 7 or divisible by 3.
+CopyReplit
+#include <stdio.h>
+
+int main() {
+    int number;
+
+    printf("Enter a number: ");
+    scanf("%d", &number);
+    
+    if (number % 7 == 0 || number % 3 == 0) {
+        printf("%d is divisible by 7 or 3.\n", number);
+    } else {
+        printf("%d is neither divisible by 7 nor 3.\n", number);
+    }
+
+    return 0;
+}
+15. WAP to check whether a given number is positive, negative or zero.
+CopyReplit
+#include <stdio.h>
+
+int main() {
+    int number;
+
+    printf("Enter a number: ");
+    scanf("%d", &number);
+    
+    if (number > 0) {
+        printf("%d is positive.\n", number);
+    } else if (number < 0) {
+        printf("%d is negative.\n", number);
+    } else {
+        printf("%d is zero.\n", number);
+    }
+
+    return 0;
+}
+16. WAP to check whether a given character is an alphabet (uppercase), an alphabet (lower case), a digit or a special character.
+CopyReplit
+#include <stdio.h>
+
+int main() {
+    char ch;
+
+    printf("Enter a character: ");
+    scanf(" %c", &ch);
+    
+    if (ch >= 'A' && ch <= 'Z') {
+        printf("%c is an uppercase alphabet.\n", ch);
+    } else if (ch >= 'a' && ch <= 'z') {
+        printf("%c is a lowercase alphabet.\n", ch);
+    } else if (ch >= '0' && ch <= '9') {
+        printf("%c is a digit.\n", ch);
+    } else {
+        printf("%c is a special character.\n", ch);
+    }
+
+    return 0;
+}
+17. WAP which takes the length of the sides of a triangle as an input. Display whether the triangle is valid or not.
+CopyReplit
+#include <stdio.h>
+
+int main() {
+    float a, b, c;
+
+    printf("Enter lengths of three sides of a triangle:\n");
+    scanf("%f %f %f", &a, &b, &c);
+    
+    if (a + b > c && a + c > b && b + c > a) {
+        printf("The triangle is valid.\n");
+    } else {
+        printf("The triangle is not valid.\n");
+    }
+
+    return 0;
+}
+18. WAP which takes the month number as an input and display number of days in that month.
+CopyReplit
+#include <stdio.h>
+
+int main() {
+    int month;
+
+    printf("Enter month number (1-12): ");
+    scanf("%d", &month);
+    
+    switch (month) {
+        case 1: case 3: case 5: case 7: case 8: case 10: case 12:
+            printf("31 days.\n");
+            break;
+        case 4: case 6: case 9: case 11:
+            printf("30 days.\n");
+            break;
+        case 2:
+            printf("28 or 29 days (leap year consideration).\n");
+            break;
+        default:
+            printf("Invalid month number.\n");
+    }
+
+    return 0;
+}
+19. WAP check whether roots of a given quadratic equation are real & distinct, real & equal or imaginary roots.
+CopyReplit
+#include <stdio.h>
+#include <math.h>
+
+int main() {
+    float a, b, c, discriminant;
+
+    printf("Enter coefficients a, b, c of the quadratic equation (ax^2 + bx + c = 0): ");
+    scanf("%f %f %f", &a, &b, &c);
+    
+    discriminant = b*b - 4*a*c;
+
+    if (discriminant > 0) {
+        printf("Roots are real and distinct.\n");
+    } else if (discriminant == 0) {
+        printf("Roots are real and equal.\n");
+    } else {
+        printf("Roots are imaginary.\n");
+    }
+
+    return 0;
+}
+20. WAP to input two dates from user then print which of the entered date is greater or print same if both are equal.
+CopyReplit
+#include <stdio.h>
+
+struct Date {
+    int day;
+    int month;
+    int year;
+};
+
+int main() {
+    struct Date date1, date2;
+
+    printf("Enter first date (dd mm yyyy): ");
+    scanf("%d %d %d", &date1.day, &date1.month, &date1.year);
+    
+    printf("Enter second date (dd mm yyyy): ");
+    scanf("%d %d %d", &date2.day, &date2.month, &date2.year);
+    
+    if (date1.year > date2.year) {
+        printf("First date is greater.\n");
+    } else if (date1.year < date2.year) {
+        printf("Second date is greater.\n");
+    } else {
+        if (date1.month > date2.month) {
+            printf("First date is greater.\n");
+        } else if (date1.month < date2.month) {
+            printf("Second date is greater.\n");
+        } else {
+            if (date1.day > date2.day) {
+                printf("First date is greater.\n");
+            } else if (date1.day < date2.day) {
+                printf("Second date is greater.\n");
+            } else {
+                printf("Both dates are the same.\n");
+            }
+        }
+    }
+
+    return 0;
+}
