@@ -29,9 +29,9 @@ int rem = a % b;        // 1
 Operator	   Meaning	                 Example
 ==	         Equal to                 	x == y
 !=	         Not equal to	              x != y
->	           Greater than	              x > y
-<	           Less than	                x < y
->=	         Greater than or equal    	x >= y
+>	         Greater than	              x > y
+<	         Less than	                  x < y
+>=	         Greater than or equal     	x >= y
 <=	         Less than or equal	        x <= y
 
 
@@ -47,7 +47,7 @@ if (x < y) {
 📌 Combine or invert boolean expressions.
 
 Operator        	Name         	Example
-&&	            Logical AND	     x > 0 && y > 0
+&&	              Logical AND	     x > 0 && y > 0
 !	              Logical NOT	     !(x > y)
 
 
@@ -63,11 +63,11 @@ if (x > 0 && y > 0) {
 
 Operator        	Operation	     Example
 &	               Bitwise AND	    a & b
-`	`	             Bitwise OR
+`		           Bitwise OR
 ^	               Bitwise XOR	    a ^ b
-~	               Bitwise NOT      	~a
-<<	             Left shift      	a << 1
->>	             Right shift     	a >> 1
+~	               Bitwise NOT      ~a
+<<	               Left shift      	a << 1
+>>	               Right shift     	a >> 1
 
 
 🧪 Example:
