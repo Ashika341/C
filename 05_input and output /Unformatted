@@ -1,0 +1,68 @@
+⭐⭐⭐⭐⭐⭐⭐ CODECRAFT BY ASHIKA ⭐⭐⭐⭐⭐⭐⭐
+
+🟢 Language ➡ C
+🟢 Topic ➡ Unformatted input and output 
+
+
+📥 Unformatted Input Functions
+🔸 getchar()
+👉Reads a single character from standard input.
+👉Waits for the Enter key.
+     char ch = getchar();
+
+
+
+🔸 gets() ⚠️ (deprecated)
+👉Reads a string (line of text) until a newline (\n).
+❌ Unsafe – does not check buffer size (can cause overflow).
+       char str[50];
+       gets(str);
+
+
+🔸 fgets() ✅
+👉Reads a string with a limit on characters.
+👉Safer alternative to gets().
+     char str[50];
+     fgets(str, sizeof(str), stdin);
+
+
+🔸 getch()
+👉Reads a character without waiting for Enter.
+👉Does not echo the character to screen.
+      char ch = getch();
+
+
+🔸 getche()
+👉Reads a character without Enter, like getch().
+👉Echoes the character to screen.
+      char ch = getche();
+
+
+
+📤 Unformatted Output Functions
+🔸 putchar()
+👉Outputs a single character to the screen.
+      putchar('A');
+
+
+🔸 puts()
+👉Outputs a string followed by a newline.
+       puts("Hello, World!");
+
+
+🔸 fputs()
+👉Outputs a string to a specified output stream (e.g., stdout).
+❌ No automatic newline.
+      fputs("Hello", stdout);
+
+
+
+🔸 putch()
+👉Outputs a single character.
+👉Similar to putchar(); available in some compilers (like Turbo C).
+      putch('B');
+
+
+🔸 putche()
+Outputs a character and echoes it to screen (like putch() + echo).
+putche('C');
