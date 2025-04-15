@@ -1,0 +1,33 @@
+🗝️ Keywords in C
+
+ 👉 Definition: Reserved words that have special meaning in C.
+ 👉 Used for: Defining structure and syntax (e.g., data types, control flow).
+❌ Cannot be used as variable names
+🔢 Total: 32 standard keywords in C
+
+Examples:
+int, float, return, if, else, for, while, void, break, continue, switch, case, struct, const
+
+
+
+🆔 Identifiers in C
+ 👉 Definition: Names used to identify variables, functions, arrays, etc.
+
+✅ Created by the programmer
+Rules:
+ 👉 Must start with a letter (A–Z, a–z) or underscore (_)
+ 👉 Can contain letters, digits (0–9), underscores
+❌ No spaces or special characters
+🔠 Case-sensitive (total ≠ Total)
+
+
+
+Best Practices:
+ 👉 Use descriptive names (userScore, tempValue)
+ 👉 Avoid starting with _ unless necessary
+ 👉 Don’t use keywords as identifiers
+
+Examples:
+int totalMarks;
+float average;
+void displayResult();
