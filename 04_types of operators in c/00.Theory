@@ -54,6 +54,7 @@ if (x < y) {
 
 Operator        	Name         	Example
 &&	              Logical AND	     x > 0 && y > 0
+||                Logical OR         x > 0 || y > 0 
 !	              Logical NOT	     !(x > y)
 
 
@@ -69,11 +70,13 @@ if (x > 0 && y > 0) {
 
 Operator        	Operation	     Example
 &	               Bitwise AND	    a & b
-`		           Bitwise OR
-^	               Bitwise XOR	    a ^ b
-~	               Bitwise NOT      ~a
-<<	               Left shift      	a << 1
->>	               Right shift     	a >> 1
+|                  Bitwise OR       a | b 
+^	               Bitwise XOR	    a ^ b 
+~	               Bitwise NOT      ~a    ----> -(input+1)
+<<	               Left shift      	a << 1 --->  input*pow(2,no.of.times shifted)
+>>	               Right shift     	a >> 1 --->  input/pow(2,no.of.times shifted) 
+
+
 
 
 🧪 Example:
@@ -89,6 +92,9 @@ int result = a & b; // 1
 
 Operator         	Description           	Equivalent To
 =	                 Assignment	             x = 5
+
+except the = operator the remaining operators are called compound assignment operators or shorthand operators 
+
 +=	               Add and assign         	x = x + 5
 -=	               Subtract and assign     	x = x - 5
 *=	               Multiply and assign	    x = x * 5
@@ -98,8 +104,9 @@ Operator         	Description           	Equivalent To
 
 🧪 Example:
 int x = 10;
-x += 5; // x becomes 15
-
+x += 5;--> x=x+5 
+           x=10+5 
+           x=15 
 
 6️⃣ Unary Operators ☝️
 📌 Work with a single operand.
