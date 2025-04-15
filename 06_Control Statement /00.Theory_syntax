@@ -1,0 +1,111 @@
+⭐⭐⭐⭐⭐⭐⭐ CODECRAFT BY ASHIKA ⭐⭐⭐⭐⭐⭐⭐
+
+🟢 Language ➡ C
+🟢 Topic ➡ Control Statement   
+
+
+🧭 Control Statements in C
+Control statements change the flow of execution in a program.
+
+✅ 1. Decision Control Statements
+Used to make decisions based on conditions.
+
+🔹 if Statement
+Executes code only if the condition is true.
+if (condition) {
+    // true block
+}
+
+
+🔹 if...else
+Choose between two blocks based on condition.
+if (condition) {
+    // true block
+} else {
+    // false block
+}
+
+
+
+🔹 else if Ladder
+Checks multiple conditions in sequence.
+if (cond1) {
+    // block 1
+} else if (cond2) {
+    // block 2
+} else {
+    // default block
+}
+
+
+🔹 Ternary Operator ? :
+Shorthand for if...else.
+(condition) ? value_if_true : value_if_false;
+
+
+🔹 Logical Operators
+Used to combine or compare conditions:
+
+&& (AND)
+|| (OR)
+! (NOT)
+
+
+
+
+
+🔹 switch-case
+Used when multiple conditions depend on a single expression.
+
+switch(expression) {
+    case constant1:
+        // code
+        break;
+    case constant2:
+        // code
+        break;
+    default:
+        // default code
+}
+
+
+
+🔁 2. Iterative (Looping) Statements
+Used to execute a block of code repeatedly.
+
+🔹 for loop
+for(initialization; condition; increment) {
+    // loop body
+}
+
+
+
+🔹 while loop
+while(condition) {
+    // loop body
+}
+
+
+
+🔹 do-while loop
+do {
+    // loop body
+} while(condition);
+
+
+
+🚀 3. Jumping Statements
+Used to jump from one part of the code to another.
+
+🔹 break
+Exits the loop or switch immediately.
+
+🔹 continue
+Skips the current iteration and moves to the next.
+
+🔹 goto
+Jumps to a labeled statement 
+
+🔹 return
+Exits from a function and optionally returns a value.
+
