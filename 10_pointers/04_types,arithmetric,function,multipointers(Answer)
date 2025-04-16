@@ -173,103 +173,7 @@ int main() {
 
 
 
-
-🔹 TYPE-3: POINTERS WITH ARRAYS (5 Programs)
-🔰 1. Access Array Elements Using Pointer
-
-#include <stdio.h>
-int main() {
-    int arr[] = {1, 2, 3, 4, 5};
-    int *ptr = arr;
-    for (int i = 0; i < 5; i++) {
-        printf("%d ", *(ptr + i));
-    }
-    return 0;
-}
-📤 Output: 1 2 3 4 5
-
-
-
-
-🔰 2. Find Maximum in Array Using Pointer
-
-#include <stdio.h>
-int main() {
-    int arr[] = {10, 50, 30, 90};
-    int *ptr = arr, max = *ptr;
-    for (int i = 1; i < 4; i++) {
-        if (*(ptr + i) > max)
-            max = *(ptr + i);
-    }
-    printf("Maximum = %d\n", max);
-    return 0;
-}
-📤 Output: Maximum = 90
-
-
-
-
-
-
-🔰 3. Copy Array Using Pointer
-
-#include <stdio.h>
-int main() {
-    int src[] = {1, 2, 3, 4, 5}, dest[5];
-    int *s = src, *d = dest;
-    for (int i = 0; i < 5; i++) {
-        *(d + i) = *(s + i);
-    }
-    for (int i = 0; i < 5; i++)
-        printf("%d ", dest[i]);
-    return 0;
-}
-📤 Output: 1 2 3 4 5
-
-
-
-
-
-
-🔰 4. Print Even Elements Using Pointer
-
-#include <stdio.h>
-int main() {
-    int arr[] = {10, 15, 20, 25, 30};
-    int *ptr = arr;
-    for (int i = 0; i < 5; i++) {
-        if (*(ptr + i) % 2 == 0)
-            printf("%d ", *(ptr + i));
-    }
-    return 0;
-}
-📤 Output: 10 20 30
-
-
-
-
-
-
-🔰 5. Count Odd Numbers Using Pointer
-
-#include <stdio.h>
-int main() {
-    int arr[] = {11, 22, 33, 44, 55}, count = 0;
-    int *ptr = arr;
-    for (int i = 0; i < 5; i++) {
-        if (*(ptr + i) % 2 != 0)
-            count++;
-    }
-    printf("Odd count = %d\n", count);
-    return 0;
-}
-📤 Output: Odd count = 3
-
-
-
-
-
-🔹 TYPE-4: POINTERS IN FUNCTIONS (5 Programs)
+🔹 TYPE-3: POINTERS IN FUNCTIONS (5 Programs)
 🔰 1. Pass Value to Function Using Pointer
 
 #include <stdio.h>
@@ -366,7 +270,7 @@ int main() {
 
 
 
-🔹 TYPE-5: MULTIPLE POINTERS (5 Programs)
+🔹 TYPE-4: MULTIPLE POINTERS (5 Programs)
 🔰 1. Swapping Two Numbers Using Multiple Pointers
 
 #include <stdio.h>
