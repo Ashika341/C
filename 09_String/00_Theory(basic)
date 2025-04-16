@@ -1,0 +1,163 @@
+⭐⭐⭐⭐⭐⭐⭐ CODECRAFT BY ASHIKA ⭐⭐⭐⭐⭐⭐⭐
+
+🟢 Language ➡ C
+🟢 Topic ➡ Strings
+
+
+1. What is a String in C?
+Definition: A string in C is a sequence of characters stored in a contiguous block of memory, followed by a null terminator ('\0').
+
+👉Syntax:
+char str[SIZE];   // Declaration
+👉Example:   char name[] = "Ashika";
+
+💡 Important Note:Strings in C are not a built-in data type. They are represented as arrays of characters.
+
+
+
+2. String Basics
+👉String Initialization: You can initialize strings either directly or using a character array.
+char str1[] = "Hello"; // Initialized with a string literal.
+char str2[10] = {'H', 'e', 'l', 'l', 'o', '\0'};  // Manually initialized with '\0' as terminator.
+
+👉String Length: The size of a string is determined by the characters before the null terminator ('\0').
+int length = strlen(str1);  // Returns the length of the string without the null terminator
+
+
+
+
+
+3. Features of String in C
+👉Array of Characters: A string in C is stored as a sequence of characters (an array of char).
+👉Null Terminator ('\0'): Every string is terminated by a special character '\0' to mark the end.
+👉Fixed Size: The size of the string (array) must be defined at compile time or dynamically using malloc.
+
+
+
+
+
+4. How Does a String Work in C?
+
+👉Memory Representation: A string is stored in memory as a contiguous block of characters with a null terminator at the end.
+👉Accessing Elements: Elements of a string can be accessed using array indices.
+char str[] = "Hello";
+printf("%c\n", str[1]);  // Outputs: e
+👉Iteration through String: A string is typically iterated using a for loop or while loop until the null terminator is encountered.
+
+
+
+
+5. How Does String Iteration Stop in C?
+String Iteration Logic:
+➖The loop iterates through each character in the string, stopping when it reaches the null terminator ('\0').
+
+for (int i = 0; str[i] != '\0'; i++) {
+    printf("%c", str[i]);  // Prints each character
+}
+💡 Important Point:
+➖The iteration stops when the character '\0' is encountered, marking the end of the string.
+
+
+
+
+6. Common String Functions in C
+
+⏳strlen():
+➖Returns the length of the string (excluding the null terminator).
+int len = strlen(str);  // Example: 5 for "Hello"
+
+⏳strcpy():
+➖Copies one string into another.
+char dest[20];
+strcpy(dest, "Hello");
+
+
+⏳strcat():
+➖Concatenates two strings.
+char str1[20] = "Hello";
+char str2[] = " World!";
+strcat(str1, str2);  // str1 becomes "Hello World!"
+
+
+⏳strcmp():
+Compares two strings lexicographically.
+int result = strcmp("apple", "banana");  // Returns negative value if "apple" < "banana"
+
+
+
+⏳strchr():
+➖Finds the first occurrence of a character in a string.
+char *result = strchr("Hello", 'l');  // Finds first 'l'
+
+
+
+⏳strstr():
+➖Finds the first occurrence of a substring.
+char *result = strstr("Hello World", "World");
+
+
+
+7. String and Character Arrays
+👉Character Array Representation: Strings are stored as character arrays in C, and each character is an individual element in the array.
+char str[] = "Ashika";  // Character array representation
+
+Array vs. String: A string is essentially an array of characters with a null terminator. An array does not necessarily contain a null terminator.
+
+
+
+
+
+8. Frequency of Characters in a String
+👉Problem Statement: Count the frequency of each character in a string.
+Example Code:
+void charFrequency(char *str) {
+    int freq[256] = {0};  // Array to store frequency of characters
+    for (int i = 0; str[i] != '\0'; i++) {
+        freq[(int)str[i]]++;
+    }
+    
+    // Print frequency
+    for (int i = 0; i < 256; i++) {
+        if (freq[i] != 0) {
+            printf("%c occurs %d times\n", i, freq[i]);
+        }
+    }
+}
+
+
+
+
+
+9. Special Characters in Strings
+👉Escape Sequences: In C, special characters like \n, \t, \', \", \\, and \0 are used in strings.
+char str[] = "Hello\nWorld";  // \n is a newline character
+Important Escape Characters:
+
+\n → New line
+\t → Horizontal tab
+\\ → Backslash
+\' → Single quote
+\" → Double quote
+\0 → Null terminator
+
+
+
+
+10. String Functions for Beginners in C
+
+⏳strncpy():
+➖Copies up to a specified number of characters from one string to another.
+strncpy(dest, src, n);  // Copies 'n' characters from src to dest
+
+
+⏳sprintf():
+➖Writes formatted output to a string.
+char buffer[50];
+sprintf(buffer, "Name: %s, Age: %d", "Ashika", 25);
+
+
+⏳sscanf():
+Reads formatted input from a string.
+char str[] = "25 10";
+int a, b;
+sscanf(str, "%d %d", &a, &b);
