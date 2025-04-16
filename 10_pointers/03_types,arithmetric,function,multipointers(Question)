@@ -31,23 +31,7 @@
 
 
 
-
-
-🔹 TYPE-3: POINTERS WITH ARRAYS (5 Programs)
-1.Write a C program to access all array elements using a pointer.
-
-2.Write a C program to find the maximum element in an array using pointer.
-
-3.Write a C program to copy one array to another using pointers.
-
-4.Write a C program to print even numbers from an array using a pointer.
-
-5.Write a C program to count odd numbers in an array using a pointer.
-
-
-
-
-🔹 TYPE-4: POINTERS IN FUNCTIONS (5 Programs)
+🔹 TYPE-3: POINTERS IN FUNCTIONS (5 Programs)
 1.Write a C program to pass value to a function using pointer.
 
 2.Write a C program to swap two values using function and pointers.
@@ -59,7 +43,9 @@
 5.Write a C program to calculate factorial of a number using function and pointer.
 
 
-🔹 TYPE-5: MULTIPLE POINTERS (5 Programs)
+
+
+🔹 TYPE-4: MULTIPLE POINTERS (5 Programs)
 1.Write a C program to swap two numbers using multiple pointers.
 
 2.Write a C program to access 2D array elements using multiple pointers.
