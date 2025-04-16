@@ -1,0 +1,100 @@
+⭐⭐⭐⭐⭐⭐⭐ CODECRAFT BY ASHIKA ⭐⭐⭐⭐⭐⭐⭐
+
+🟢 Language ➡ C
+🟢 Topic ➡ Pointers (basic)
+
+
+🔸 What is a Pointer in C?
+  👉A pointer is a variable that stores the memory address of another variable.
+  👉It is a powerful feature that provides flexibility and direct memory access.
+
+int a = 10;
+int *p = &a;   // p stores address of variable 'a'
+
+
+
+🔸 Declaration of Pointer
+  datatype *pointer_name;
+✅ Example:
+int *ptr;    // pointer to int  
+float *fptr; // pointer to float
+
+
+
+🔸 Initialization of Pointer
+int a = 5;
+int *ptr = &a;  // ptr holds address of a
+
+
+
+
+🔸 Dereferencing a Pointer
+  👉Accessing value at the address stored by the pointer using * operator.
+printf("%d", *ptr);  // prints value of a, i.e., 5
+
+
+🔸 Size of Pointer
+  👉The size of a pointer depends on the system architecture (e.g., 4 bytes on 32-bit, 8 bytes on 64-bit systems).
+int *ptr;
+printf("%lu", sizeof(ptr));  // Output depends on system
+
+
+
+
+🔸 Special Types of Pointers
+  👉NULL Pointer
+      int *ptr = NULL;   // pointer points to nothing
+
+  👉Void Pointer
+      void *ptr;   // generic pointer, can point to any data type
+
+  👉Wild Pointer
+     int *ptr;   // uninitialized pointer, dangerous!
+
+  👉Dangling Pointer
+     Points to memory that is freed or out of scope.
+
+🔸 Pointer Arithmetic
+  👉Allowed operations:
+  👉Increment: ptr++
+  👉Decrement: ptr--
+  👉Addition/Subtraction: ptr + n, ptr - n
+
+✅ Example:
+int arr[] = {10, 20, 30};
+int *p = arr;
+printf("%d", *(p + 1));  // 20
+
+
+🔸 Constant Pointers
+  👉Pointer to Constant
+const int *ptr;  // data is constant, pointer can change
+
+  👉Constant Pointer
+int *const ptr;  // pointer is constant, data can change
+
+  👉Constant Pointer to Constant
+const int *const ptr;  // both pointer and data are constant
+
+
+🔸 Pointer to Function
+  👉A pointer storing address of a function.
+
+✅ Syntax:
+return_type (*ptr)(parameter_list);
+
+✅ Example:
+int add(int a, int b) { return a + b; }
+int (*fptr)(int, int) = add;
+printf("%d", fptr(3, 4));  // Output: 7
+
+
+🔸 Multilevel Pointers (Pointer to Pointer)
+✅ Declaration:
+int **pp;
+
+✅ Example:
+int a = 10;
+int *p = &a;
+int **pp = &p;
+printf("%d", **pp);   // Output: 10
