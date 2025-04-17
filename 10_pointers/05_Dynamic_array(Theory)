@@ -1,0 +1,87 @@
+⭐⭐⭐⭐⭐⭐⭐ CODECRAFT BY ASHIKA ⭐⭐⭐⭐⭐⭐⭐
+
+🟢 Language ➡ C
+🟢 Topic ➡ Dynamic Array
+
+🔶 STATIC vs DYNAMIC ARRAYS IN C
+
+   👉Static Array
+🔸 Definition: A static array is an array where the size is fixed at compile time and memory is allocated on the stack.
+🔸 Memory Allocation: The memory is allocated at the start of the program execution.
+🔸 Size: The size of the array cannot be changed after initialization.
+🔸 Access: Faster because the memory is allocated in contiguous blocks on the stack.
+
+   Example:int arr[5]; // Static array of size 5
+
+
+ 👉Dynamic Array
+🔸 Definition: A dynamic array is an array whose size is determined at runtime, and the memory is allocated on the heap.
+🔸 Memory Allocation: The memory is allocated dynamically during program execution using memory allocation functions like malloc(), calloc(), and realloc().
+🔸 Size: The size of a dynamic array can be changed at runtime (by reallocating memory).
+🔸 Access: Slower compared to static arrays because the memory is allocated on the heap.
+
+  Example:int *arr = (int *)malloc(5 * sizeof(int)); // Dynamic array using malloc
+
+
+🔷 WHAT IS A DYNAMIC ARRAY?
+🔸 A dynamic array in C allows flexible memory allocation at runtime.
+🔸 It is commonly used when the size of the array is not known in advance and can change during program execution.
+🔸 Dynamic arrays are implemented using pointers and are allocated in the heap memory.
+
+🔷 DYNAMIC ARRAY KEYWORDS IN C 
+
+Function/Keyword	   Description
+ 👉malloc()	          Allocates a block of memory of a specified size.
+ 👉calloc()	          Allocates memory for an array of elements, initializing the memory to zero.
+ 👉realloc()	          Resizes a previously allocated memory block.
+ 👉free()	            Frees the memory previously allocated.
+ 👉resize()	          to resize the array but not directly available in C.
+
+🔷 SYNTAX FOR DYNAMIC MEMORY ALLOCATION
+1. 1D Dynamic Array Syntax
+
+ 👉Using malloc()
+int *arr;
+arr = (int *)malloc(n * sizeof(int)); // Allocates memory for 'n' integers
+
+ 👉Using calloc()
+int *arr;
+arr = (int *)calloc(n, sizeof(int)); // Allocates memory for 'n' integers, initializes to 0
+
+ 👉Using realloc() (to resize the array)
+arr = (int *)realloc(arr, new_size * sizeof(int)); // Resizes the existing memory block
+
+ 👉Using free()
+free(arr); // Frees the dynamically allocated memory
+
+
+2. 2D Dynamic Array Syntax
+
+ 👉Using malloc()
+int **arr;
+arr = (int **)malloc(r * sizeof(int *)); // Allocate memory for rows
+for (i = 0; i < r; i++) {
+    arr[i] = (int *)malloc(c * sizeof(int)); // Allocate memory for columns
+}
+
+
+ 👉Using calloc()
+int **arr;
+arr = (int **)calloc(r, sizeof(int *)); // Allocate and initialize rows to 0
+for (i = 0; i < r; i++) {
+    arr[i] = (int *)calloc(c, sizeof(int)); // Allocate and initialize columns to 0
+}
+
+
+ 👉Using realloc() (to resize 2D array)
+arr = (int **)realloc(arr, new_r * sizeof(int *)); // Resize rows
+for (i = 0; i < new_r; i++) {
+    arr[i] = (int *)realloc(arr[i], new_c * sizeof(int)); // Resize columns
+}
+
+
+ 👉Using free()
+for (i = 0; i < r; i++) {
+    free(arr[i]); // Free each row
+}
+free(arr); // Free the entire array
