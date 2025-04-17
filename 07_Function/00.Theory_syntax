@@ -128,21 +128,101 @@ int main() {
 
 
 
-🔸 8. Recursive Function
-    📥  A recursive function is one that calls itself. It is usually used to solve problems that can be broken down into smaller, similar problems, like calculating factorials.
+📘8.  What is Recursion?
+Recursion is a process in which a function calls itself directly or indirectly to solve a problem.
 
-Example:
+🔶 01. Direct Recursion
+A function calls itself directly.
+void fun() {
+    // some code
+    fun();  // Direct call to itself
+}
+🟩 Example:
 
-#include <stdio.h>
-int factorial(int n) {
-    if (n == 0) {
-        return 1;  
-    } else {
-        return n * factorial(n - 1);  
+void countdown(int n) {
+    if (n == 0) return;
+    printf("%d ", n);
+    countdown(n - 1);
+}
+
+
+
+🔶 02. Indirect Recursion
+A function calls another function, and that function calls the first function again.
+
+void A() {
+    B(); // A calls B
+}
+void B() {
+    A(); // B calls A
+}
+🟩 Example:
+
+void funA(int n);
+void funB(int n);
+
+void funA(int n) {
+    if (n > 0) {
+        printf("%d ", n);
+        funB(n - 1);
     }
 }
-int main() {
-    int num = 5;
-    printf("Factorial of %d: %d\n", num, factorial(num));  
-    return 0;
+void funB(int n) {
+    if (n > 0) {
+        printf("%d ", n);
+        funA(n / 2);
+    }
 }
+
+
+🔶 03. Tail Recursion
+The recursive call is the last statement in the function.
+
+void tail(int n) {
+    if (n == 0) return;
+    printf("%d ", n);
+    tail(n - 1);  // Last operation
+}
+🟢 Optimized by compiler → Similar to loops.
+
+
+
+
+
+🔶 04. Non-Tail Recursion
+The recursive call is not the last statement; there is some operation after it.
+
+void nonTail(int n) {
+    if (n == 0) return;
+    nonTail(n - 1);  // Not the last operation
+    printf("%d ", n);  // Executed after recursion
+}
+🛑 Not optimized like tail recursion → Uses more stack space.
+
+
+
+
+
+🔶 05. Linear Recursion
+Only one recursive call is made in each function activation.
+
+void linear(int n) {
+    if (n == 0) return;
+    linear(n - 1);
+    printf("%d ", n);
+}
+✅ Simplest form of recursion.
+
+
+
+
+🔶 06. Tree Recursion
+Function calls itself more than once in a single function activation.
+
+void tree(int n) {
+    if (n == 0) return;
+    printf("%d ", n);
+    tree(n - 1);
+    tree(n - 1);
+}
+⚠️ Exponential growth in function calls → Used in problems like Fibonacci.
