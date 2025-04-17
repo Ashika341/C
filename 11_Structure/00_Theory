@@ -1,0 +1,133 @@
+⭐⭐⭐⭐⭐⭐⭐ CODECRAFT BY ASHIKA  ⭐⭐⭐⭐⭐⭐⭐
+   
+🟢 Language ➡ C
+🟢 Topic ➡ Structure
+
+
+🔶 1. STRUCTURE: DEFINITION, SYNTAX & BASIC OPERATIONS
+🔹 What is a Structure?
+A structure in C is a user-defined data type that allows grouping variables of different data types under a single name.
+
+👉 Syntax:
+struct StructureName {
+    dataType member1;
+    dataType member2;
+    ...
+};
+
+
+👉 Example:
+struct Student {
+    int id;
+    char name[50];
+    float marks;
+};
+
+
+🔹 Declaration of Structure Variable:
+struct Student s1;  // Without typedef
+
+🔹 Typedef Declaration:
+typedef struct Student {
+    int id;
+    char name[50];
+    float marks;
+} Student;
+
+Student s1; // Now we can use 'Student' instead of 'struct Student'
+
+
+
+🔹 Initialization of Structure:
+struct Student s1 = {101, "Ashika", 98.5};
+
+🔹 Accessing Members (using . and ->):
+
+👉Using dot operator
+printf("ID: %d", s1.id);
+
+👉 Using arrow operator with pointer
+struct Student *ptr = &s1;
+printf("Name: %s", ptr->name);
+
+
+🔹 Copying Structure:
+    struct Student s2 = s1;  // Entire structure copy
+
+    
+🔹 Comparing Structure:
+🔸 Structures cannot be compared directly using ==.
+if (s1.id == s2.id && strcmp(s1.name, s2.name) == 0)
+    printf("Structures are equal");
+
+
+
+
+
+    
+🔶 2. NESTED STRUCTURE
+A structure inside another structure.
+
+struct Date {
+    int day, month, year;
+};
+struct Student {
+    int id;
+    char name[50];
+    struct Date dob; // Nested structure
+};
+
+✅ Accessing nested members:
+struct Student s = {101, "Ashika", {1, 1, 2000}};
+printf("%d/%d/%d", s.dob.day, s.dob.month, s.dob.year);
+
+
+
+
+
+
+
+🔶 3. ARRAY OF STRUCTURES
+You can store multiple structure variables in an array.
+
+struct Student {
+    int id;
+    char name[50];
+    float marks;
+};
+int main() {
+    struct Student s[3];
+    for (int i = 0; i < 3; i++) {
+        printf("Enter ID, Name, Marks: ");
+        scanf("%d %s %f", &s[i].id, s[i].name, &s[i].marks);
+    }
+}
+
+
+
+
+🔶 4. STRUCTURE AND FUNCTION
+
+🔹 Passing Individual Members:
+void printDetails(int id, char name[]) {
+    printf("ID: %d, Name: %s", id, name);
+}
+
+
+🔹 Passing Entire Structure (by value):
+void printStudent(struct Student s) {
+    printf("ID: %d Name: %s", s.id, s.name);
+}
+
+🔹 Passing Structure via Pointer:
+void printStudentPtr(struct Student *s) {
+    printf("ID: %d Name: %s", s->id, s->name);
+}
+
+🔶 5. SELF-REFERENTIAL STRUCTURE
+A structure that contains a pointer to a structure of the same type. Used in linked lists.
+
+struct Node {
+    int data;
+    struct Node *next;  // Self-referential
+};
