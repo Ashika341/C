@@ -1,0 +1,598 @@
+⭐⭐⭐⭐⭐⭐⭐ CODECRAFT BY ASHIKA ⭐⭐⭐⭐⭐⭐⭐
+
+🟢 Language ➡ C
+🟢 Topic ➡ String With Functions
+
+🔹 Program 1: Calculate Length of a String (User-defined Function)
+
+#include <stdio.h>
+int stringLength(char *str) {
+    int length = 0;
+    while (*str++) {
+        length++;
+    }
+    return length;
+}
+int main() {
+    char str[100];
+    printf("Enter a string: ");
+    fgets(str, sizeof(str), stdin);
+    str[stringLength(str) - 1] = '\0'; // Remove newline
+    printf("Length of the string: %d\n", stringLength(str));
+    return 0;
+}
+🔸 Sample Input:  Enter a string: Hello World
+🔸 Sample Output: Length of the string: 11
+
+
+
+
+
+🔹 Program 2: Calculate Length of a String (Pre-defined Function)
+
+#include <stdio.h>
+#include <string.h>
+int main() {
+    char str[100];
+    printf("Enter a string: ");
+    fgets(str, sizeof(str), stdin);
+    str[strcspn(str, "\n")] = '\0'; // Remove newline
+    printf("Length of the string: %lu\n", strlen(str));
+    return 0;
+}
+🔸 Sample Input: Enter a string: CodeCraft
+🔸 Sample Output: Length of the string: 9
+
+
+
+
+
+🔹 Program 3: Reverse a String (User-defined Function)
+
+#include <stdio.h>
+void reverseString(char *str) {
+    char temp;
+    int length = 0;
+    while (str[length] != '\0') {
+        length++;
+    }
+    for (int i = 0; i < length / 2; i++) {
+        temp = str[i];
+        str[i] = str[length - i - 1];
+        str[length - i - 1] = temp;
+    }
+}
+int main() {
+    char str[100];
+    printf("Enter a string: ");
+    fgets(str, sizeof(str), stdin);
+    str[strcspn(str, "\n")] = '\0';
+    reverseString(str);
+    printf("Reversed string: %s\n", str);
+    return 0;
+}
+🔸 Sample Input: Enter a string: Ashika
+🔸 Sample Output: Reversed string: akihsA
+
+
+
+
+
+🔹 Program 4: Reverse a String (Using Pre-defined Logic)
+
+#include <stdio.h>
+#include <string.h>
+int main() {
+    char str[100];
+    printf("Enter a string: ");
+    fgets(str, sizeof(str), stdin);
+    str[strcspn(str, "\n")] = '\0';
+    int length = strlen(str);
+    for (int i = length - 1; i >= 0; i--) {
+        putchar(str[i]);
+    }
+    putchar('\n');
+    return 0;
+}
+🔸 Sample Input: Enter a string: Coding
+🔸 Sample Output:  gnidoC
+
+
+
+
+
+
+🔹 Program 5: Copy One String to Another (Using strcpy)
+
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+    char str1[100], str2[100];
+    printf("Enter a string: ");
+    fgets(str1, sizeof(str1), stdin);
+    str1[strcspn(str1, "\n")] = '\0';
+    strcpy(str2, str1);
+    printf("Copied string: %s\n", str2);
+    return 0;
+}
+🔸 Sample Input: Enter a string: Hello World
+🔸 Sample Output: Copied string: Hello World
+
+
+
+
+
+
+🔹 Program 6: Compare Two Strings (Using strcmp)
+
+#include <stdio.h>
+#include <string.h>
+int main() {
+    char str1[100], str2[100];
+
+    printf("Enter first string: ");
+    fgets(str1, sizeof(str1), stdin);
+    str1[strcspn(str1, "\n")] = '\0';
+
+    printf("Enter second string: ");
+    fgets(str2, sizeof(str2), stdin);
+    str2[strcspn(str2, "\n")] = '\0';
+
+    if (strcmp(str1, str2) == 0)
+        printf("Strings are equal.\n");
+    else
+        printf("Strings are not equal.\n");
+
+    return 0;
+}
+🔸 Sample Input:
+Enter first string: Ashika
+Enter second string: Ashika
+🔸 Sample Output:
+Strings are equal.
+
+
+
+
+
+
+🔹 Program 7: Convert String to Uppercase
+
+#include <stdio.h>
+#include <ctype.h>
+
+int main() {
+    char str[100];
+    printf("Enter a string: ");
+    fgets(str, sizeof(str), stdin);
+
+    for (int i = 0; str[i] != '\0'; i++) {
+        str[i] = toupper(str[i]);
+    }
+    printf("Uppercase string: %s", str);
+    return 0;
+}
+🔸 Sample Input: Enter a string: Hello World
+🔸 Sample Output: Uppercase string: HELLO WORLD
+
+
+
+
+
+🔹 Program 8: Convert String to Lowercase
+
+#include <stdio.h>
+#include <ctype.h>
+
+int main() {
+    char str[100];
+    printf("Enter a string: ");
+    fgets(str, sizeof(str), stdin);
+
+    for (int i = 0; str[i] != '\0'; i++) {
+        str[i] = tolower(str[i]);
+    }
+    printf("Lowercase string: %s", str);
+    return 0;
+}
+🔸 Sample Input: Enter a string: HELLO
+🔸 Sample Output: Lowercase string: hello
+
+
+
+
+
+🔹 Program 9: Count Vowels and Consonants in a String
+
+#include <stdio.h>
+#include <ctype.h>
+int main() {
+    char str[100];
+    int vowels = 0, consonants = 0;
+
+    printf("Enter a string: ");
+    fgets(str, sizeof(str), stdin);
+    for (int i = 0; str[i] != '\0'; i++) {
+        char ch = tolower(str[i]);
+        if (ch >= 'a' && ch <= 'z') {
+            if (ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u')
+                vowels++;
+            else
+                consonants++;
+        }
+    }
+    printf("Vowels: %d\nConsonants: %d\n", vowels, consonants);
+    return 0;
+}
+🔸 Sample Input: Enter a string: Hello Ashika
+🔸 Sample Output:
+Vowels: 5
+Consonants: 6
+
+
+
+
+
+🔹 Program 10: Count Digits, Alphabets, and Special Characters
+
+#include <stdio.h>
+#include <ctype.h>
+
+int main() {
+    char str[100];
+    int alpha = 0, digit = 0, special = 0;
+
+    printf("Enter a string: ");
+    fgets(str, sizeof(str), stdin);
+
+    for (int i = 0; str[i] != '\0'; i++) {
+        if (isalpha(str[i]))
+            alpha++;
+        else if (isdigit(str[i]))
+            digit++;
+        else if (!isspace(str[i]))
+            special++;
+    }
+
+    printf("Alphabets: %d\nDigits: %d\nSpecial Characters: %d\n", alpha, digit, special);
+    return 0;
+}
+🔸 Sample Input:Enter a string: Code123@2024!
+🔸 Sample Output:
+Alphabets: 4
+Digits: 7
+Special Characters: 2
+
+
+
+
+
+
+🔹 Program 11: Check if String is Palindrome
+
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+    char str[100], rev[100];
+    int len, flag = 1;
+
+    printf("Enter a string: ");
+    fgets(str, sizeof(str), stdin);
+    str[strcspn(str, "\n")] = '\0';
+
+    len = strlen(str);
+    for (int i = 0; i < len; i++) {
+        rev[i] = str[len - 1 - i];
+    }
+    rev[len] = '\0';
+
+    if (strcmp(str, rev) == 0)
+        printf("The string is a palindrome.\n");
+    else
+        printf("The string is not a palindrome.\n");
+
+    return 0;
+}
+🔸 Sample Input: Enter a string: madam
+🔸 Sample Output: The string is a palindrome.
+
+
+
+
+
+
+
+🔹 Program 12: Concatenate Two Strings
+
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+    char str1[100], str2[50];
+
+    printf("Enter first string: ");
+    fgets(str1, sizeof(str1), stdin);
+    str1[strcspn(str1, "\n")] = '\0';
+
+    printf("Enter second string: ");
+    fgets(str2, sizeof(str2), stdin);
+    str2[strcspn(str2, "\n")] = '\0';
+
+    strcat(str1, str2);
+    printf("Concatenated string: %s\n", str1);
+    return 0;
+}
+🔸 Sample Input:
+Enter first string: Code
+Enter second string: Craft
+🔸 Sample Output:
+Concatenated string: CodeCraft
+
+
+
+
+
+
+
+🔹 Program 13: Count Frequency of Each Character
+
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+    char str[100];
+    int freq[256] = {0};
+
+    printf("Enter a string: ");
+    fgets(str, sizeof(str), stdin);
+
+    for (int i = 0; str[i] != '\0'; i++) {
+        freq[(unsigned char)str[i]]++;
+    }
+    printf("Character Frequencies:\n");
+    for (int i = 0; i < 256; i++) {
+        if (freq[i] > 0 && i != '\n')
+            printf("%c = %d\n", i, freq[i]);
+    }
+
+    return 0;
+}
+🔸 Sample Input: Enter a string: hello
+🔸 Sample Output:
+Character Frequencies:
+h = 1
+e = 1
+l = 2
+o = 1
+
+
+
+
+
+
+
+
+🔹 Program 14: Remove Vowels from String
+
+#include <stdio.h>
+#include <ctype.h>
+
+int main() {
+    char str[100], result[100];
+    int i, j = 0;
+
+    printf("Enter a string: ");
+    fgets(str, sizeof(str), stdin);
+
+    for (i = 0; str[i] != '\0'; i++) {
+        char ch = tolower(str[i]);
+        if (ch != 'a' && ch != 'e' && ch != 'i' && ch != 'o' && ch != 'u')
+            result[j++] = str[i];
+    }
+    result[j] = '\0';
+    printf("String without vowels: %s\n", result);
+    return 0;
+}
+🔸 Sample Input: Enter a string: beautiful
+🔸 Sample Output: String without vowels: btfl
+
+
+
+
+
+
+
+
+🔹 Program 15: Remove All Whitespaces
+
+#include <stdio.h>
+
+int main() {
+    char str[100], result[100];
+    int j = 0;
+
+    printf("Enter a string: ");
+    fgets(str, sizeof(str), stdin);
+
+    for (int i = 0; str[i] != '\0'; i++) {
+        if (str[i] != ' ')
+            result[j++] = str[i];
+    }
+    result[j] = '\0';
+    printf("String without spaces: %s\n", result);
+    return 0;
+}
+🔸 Sample Input: Enter a string: Remove all spaces
+🔸 Sample Output: String without spaces: Removeallspaces
+
+
+
+
+
+
+
+🔹 Program 16: Toggle Case of Each Character in a String
+
+#include <stdio.h>
+#include <ctype.h>
+
+int main() {
+    char str[100];
+    printf("Enter a string: ");
+    fgets(str, sizeof(str), stdin);
+
+    for (int i = 0; str[i] != '\0'; i++) {
+        if (islower(str[i]))
+            str[i] = toupper(str[i]);
+        else if (isupper(str[i]))
+            str[i] = tolower(str[i]);
+    }
+
+    printf("Toggled string: %s", str);
+    return 0;
+}
+🔸 Sample Input: Enter a string: CodeCraft By Ashika
+🔸 Sample Output: Toggled string: cODEcRAFT bY aSHIKA
+
+
+
+
+
+
+🔹 Program 17: Count Number of Words in a String
+
+#include <stdio.h>
+#include <ctype.h>
+
+int main() {
+    char str[100];
+    int count = 0, inWord = 0;
+
+    printf("Enter a string: ");
+    fgets(str, sizeof(str), stdin);
+
+    for (int i = 0; str[i] != '\0'; i++) {
+        if (isspace(str[i])) {
+            inWord = 0;
+        } else if (!inWord) {
+            inWord = 1;
+            count++;
+        }
+    }
+
+    printf("Number of words: %d\n", count);
+    return 0;
+}
+🔸 Sample Input: Enter a string: Welcome to CodeCraft by Ashika
+🔸 Sample Output: Number of words: 5
+
+
+
+
+
+
+🔹 Program 18: Reverse Each Word in a String
+
+#include <stdio.h>
+#include <string.h>
+
+void reverseWord(char *start, char *end) {
+    while (start < end) {
+        char temp = *start;
+        *start++ = *end;
+        *end-- = temp;
+    }
+}
+int main() {
+    char str[100];
+    printf("Enter a string: ");
+    fgets(str, sizeof(str), stdin);
+
+    char *wordStart = NULL;
+    char *temp = str;
+
+    while (*temp) {
+        if ((wordStart == NULL) && (*temp != ' ' && *temp != '\n'))
+            wordStart = temp;
+        if (wordStart && (*(temp + 1) == ' ' || *(temp + 1) == '\0' || *(temp + 1) == '\n')) {
+            reverseWord(wordStart, temp);
+            wordStart = NULL;
+        }
+        temp++;
+    }
+    printf("String with reversed words: %s", str);
+    return 0;
+}
+🔸 Sample Input: Enter a string: Hello Ashika
+🔸 Sample Output: String with reversed words: olleH akihsA
+
+
+
+
+
+
+
+
+🔹 Program 19: Remove All Digits from a String
+
+#include <stdio.h>
+#include <ctype.h>
+
+int main() {
+    char str[100], result[100];
+    int j = 0;
+
+    printf("Enter a string: ");
+    fgets(str, sizeof(str), stdin);
+
+    for (int i = 0; str[i] != '\0'; i++) {
+        if (!isdigit(str[i]))
+            result[j++] = str[i];
+    }
+    result[j] = '\0';
+    printf("String without digits: %s\n", result);
+    return 0;
+}
+🔸 Sample Input: Enter a string: Ashika123Code456
+🔸 Sample Output: String without digits: AshikaCode
+
+
+
+
+
+
+
+🔹 Program 20: Find the Longest Word in a String
+
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+    char str[200], word[50], longest[50] = "";
+    int maxLen = 0, i = 0, len = 0;
+
+    printf("Enter a string: ");
+    fgets(str, sizeof(str), stdin);
+
+    while (1) {
+        if (str[i] != ' ' && str[i] != '\n' && str[i] != '\0') {
+            word[len++] = str[i];
+        } else {
+            word[len] = '\0';
+            if (len > maxLen) {
+                maxLen = len;
+                strcpy(longest, word);
+            }
+            len = 0;
+        }
+        if (str[i] == '\0') break;
+        i++;
+    }
+
+    printf("Longest word: %s\n", longest);
+    return 0;
+}
+🔸 Sample Input: Enter a string: Welcome to CodeCraft by Ashika
+🔸 Sample Output: Longest word: CodeCraft
