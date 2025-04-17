@@ -1,0 +1,90 @@
+📘 00_Introduction to Programming
+🔹 Basic Theory
+
+📘 01_Introduction to C language
+🔹 Why C Language
+🔹 History
+🔹 Features
+🔹 Structure of C Program
+
+📘 02_Data Types in C
+🔹 Data Types (int, float, char, etc.)
+🔹 Constants
+🔹 Keywords
+🔹 Variables
+
+📘 03_Basic Input Output
+🔹 Questions
+🔹 Answers
+
+📘 04_Types of Operators in C
+🔹 Theory (Arithmetic, Logical, Relational, Bitwise, etc.)
+🔹 Operator-Based Questions
+🔹 Operator-Based Answers
+
+📘 05_Input and Output
+🔹 Formatted Input/Output (scanf, printf)
+🔹 Unformatted Input/Output (getchar, putchar, etc.)
+
+📘 06_Control Statement
+🔸 00_Theory & Syntax
+🔸 01_Conditional Statements (Questions)
+🔸 02_Conditional Statements (Answers)
+🔸 03_Switch Case (Questions)
+🔸 04_Switch Case (Answers)
+🔸 05_Iterative Statements (Questions)
+🔸 06_Iterative Statements (Answers)
+🔸 07_Jumping Statements (Questions)
+🔸 08_Jumping Statements (Answers)
+
+
+📘 07_Function
+🔸 00_Theory + Syntax
+🔸 01_Function (Questions)
+🔸 02_Function (Answers)
+
+
+
+📘 08_Arrays
+🔸 00_Theory (1D & 2D Array Concepts)
+🔸 01_1D Arrays (Questions)
+🔸 02_1D Arrays (Answers)
+🔸 03_1D Arrays with Functions (Questions)
+🔸 04_1D Arrays with Functions (Answers)
+🔸 05_Multidimensional Arrays (Questions)
+🔸 06_Multidimensional Arrays (Answers)
+🔸 07_Multidimensional Arrays with Functions (Questions)
+🔸 08_Multidimensional Arrays with Functions (Answers)
+🔸 09_Pattern Problems (Questions)
+
+
+
+
+📘 09_String
+🔸 00_Theory (Basics, Terminator, Storage)
+🔸 01_String (Questions)
+🔸 02_String (Answers)
+🔸 03_String with Functions (Questions)
+🔸 04_String with Functions (Answers)
+🔸 05_2D Strings (Handling Multiple Strings, Questions)
+🔸 05_2D Strings (Handling Multiple Strings, Answer)
+
+
+
+
+
+📘 10_Pointers
+🔸 00_Theory (Basics of Pointers)
+🔸 01_Pointers (Questions)
+🔸 02_Pointers (Answers)
+🔸 03_Advanced Topics: Types of Pointers, Pointer Arithmetic, Function Pointers, Multi-Pointers (Questions)
+🔸 04_Advanced Topics: (Answers)
+🔸 05_Dynamic Memory Allocation (Theory)
+🔸 06_Dynamic_Memoery_Allocation (Questions)
+🔸 07_Dynamic_Memoery_Allocation (Answers)
+
+
+📘 11_Structure
+🔸 00_Theory (Definition, Access, Typedef, Nesting, Array of Structure, Self-Referential)
+🔸 01_Structure (Questions)
+🔸 02_Structure (Answers)
