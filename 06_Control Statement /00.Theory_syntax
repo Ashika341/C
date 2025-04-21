@@ -43,15 +43,6 @@ Shorthand for if...else.
 (condition) ? value_if_true : value_if_false;
 
 
-🔹 Logical Operators
-Used to combine or compare conditions:
-
-&& (AND)
-|| (OR)
-! (NOT)
-
-
-
 
 
 🔹 switch-case
