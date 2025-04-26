@@ -81,9 +81,9 @@ void displayMessage() {
 4️⃣ Type Modifiers
 Used to alter the range or size of basic data types.
 
-🔣 Modifier	              🧾 Meaning                  	🧪 Example
+🔣 Modifier	               🧾 Meaning                    	🧪 Example
 signed	    Allows positive and negative values	           signed int a = -10;
 unsigned	Only positive values	                       unsigned int b = 20;
 short     	Smaller range, saves memory	                   short int c = 32767;
 long	    Extended range	                               long int d = 1234567890;
-long        long	Larger than long, used in C99+         long long int e = 1234567890123456789LL;
+long        long Larger than long, used in C99+            long long int e = 1234567890123456789LL;
