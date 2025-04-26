@@ -20,9 +20,9 @@ Whole numbers without a decimal point.
    👉  Hexadecimal (Base 16): Prefix 0x or 0X → 0x2A (equals 42 in decimal)
 
 Examples:
-int dec = 42;     // Decimal
-int oct = 052;    // Octal
-int hex = 0x2A;   // Hexadecimal
+int dec = 42;     
+int oct = 052;    
+int hex = 0x2A;   
 
 
 
@@ -32,8 +32,8 @@ Numbers with a fractional part or in scientific notation.
 Examples:
 Floating-Point: 3.14, -0.001, 2.0
 Exponential: 1.5e3 (equals 1500.0)
-float pi = 3.14;              // Floating-point
-double speedOfLight = 2.997e8; // Scientific notation
+float pi = 3.14;              
+double speedOfLight = 2.997e8; 
 
 
 
@@ -42,10 +42,10 @@ double speedOfLight = 2.997e8; // Scientific notation
 
 🔤 a) Single Character Constants
 A single character, enclosed in single quotes (' ').
-char letter = 'A';   // Single character constant
+char letter = 'A';  
 
 
 🧵 b) String Constants
 A sequence of characters, enclosed in double quotes (" ").
 Internally, it’s an array of characters ending with '\0' (null terminator).
-char *greeting = "Hello, World!";  // String constant
+char *greeting = "Hello, World!"; 
