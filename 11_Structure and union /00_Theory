@@ -16,12 +16,16 @@ struct StructureName {
 };
 
 
+
+
 👉 Example:
 struct Student {
     int id;
     char name[50];
     float marks;
 };
+
+
 
 
 🔹 Declaration of Structure Variable:
@@ -53,6 +57,7 @@ printf("Name: %s", ptr->name);
 
 🔹 Copying Structure:
     struct Student s2 = s1;  // Entire structure copy
+
 
     
 🔹 Comparing Structure:
