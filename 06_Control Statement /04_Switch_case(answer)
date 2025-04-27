@@ -7,22 +7,20 @@
 🔹 🧠1. WAP which takes the month number as input and displays the number of days in that month.
 
 #include <stdio.h>
+
 int main() {
     int month;
     printf("Enter month number (1-12): ");
     scanf("%d", &month);
-    switch (month) {
-        case 1: case 3: case 5: case 7: case 8: case 10: case 12:
-            printf("31 days in month %d.\n", month);
-            break;
-        case 4: case 6: case 9: case 11:
-            printf("30 days in month %d.\n", month);
-            break;
-        case 2:
-            printf("28 or 29 days in February (leap year consideration).\n");
-            break;
-        default:
-            printf("Invalid month number.\n");
+    
+    if (month < 1 || month > 12) {
+        printf("Invalid month number.\n");
+    } else if (month == 2) {
+        printf("February has 28 or 29 days (depending on leap year).\n");
+    } else if (month == 4 || month == 6 || month == 9 || month == 11) {
+        printf("30 days in month %d.\n", month);
+    } else {
+        printf("31 days in month %d.\n", month);
     }
 
     return 0;
@@ -39,52 +37,59 @@ Enter month number (1-12): 2
 🔹 🧠2. Write a menu driven program for basic arithmetic operations.
 
 #include <stdio.h>
+
 int main() {
     int choice;
     float num1, num2, result;
-    do {
-        printf("\nMenu:\n");
-        printf("1. Addition\n");
-        printf("2. Subtraction\n");
-        printf("3. Multiplication\n");
-        printf("4. Division\n");
-        printf("5. Exit\n");
-        printf("Enter your choice: ");
-        scanf("%d", &choice);
-        if (choice != 5) {
-            printf("Enter two numbers: ");
-            scanf("%f %f", &num1, &num2);
-        }
-        switch (choice) {
-            case 1:
-                result = num1 + num2;
+    printf("\nMenu:\n");
+    printf("1. Addition\n");
+    printf("2. Subtraction\n");
+    printf("3. Multiplication\n");
+    printf("4. Division\n");
+    printf("5. Exit\n");
+    printf("Enter your choice: ");
+    scanf("%d", &choice);
+
+    if (choice == 5) {
+        printf("Exiting...\n");
+        return 0; // Exit the program
+    }
+
+    printf("Enter two numbers: ");
+    scanf("%f %f", &num1, &num2);
+
+    switch (choice) {
+        case 1:
+            result = num1 + num2;
+            printf("Result: %.2f\n", result);
+            break;
+        case 2:
+            result = num1 - num2;
+            printf("Result: %.2f\n", result);
+            break;
+        case 3:
+            result = num1 * num2;
+            printf("Result: %.2f\n", result);
+            break;
+        case 4:
+            if (num2 != 0) {
+                result = num1 / num2;
                 printf("Result: %.2f\n", result);
-                break;
-            case 2:
-                result = num1 - num2;
-                printf("Result: %.2f\n", result);
-                break;
-            case 3:
-                result = num1 * num2;
-                printf("Result: %.2f\n", result);
-                break;
-            case 4:
-                if (num2 != 0)
-                    result = num1 / num2;
-                else
-                    printf("Error: Division by zero.\n");
-                printf("Result: %.2f\n", result);
-                break;
-            case 5:
-                printf("Exiting...\n");
-                break;
-            default:
-                printf("Invalid choice.\n");
-        }
-    } while (choice != 5);
+            } else {
+                printf("Error: Division by zero.\n");
+            }
+            break;
+        default:
+            printf("Invalid choice.\n");
+    }
 
     return 0;
 }
+   
+
+
+
+
 
 🖥️ Sample Output:
 Menu:
@@ -149,53 +154,58 @@ Wednesday - Halfway there!
 🔹 🧠4. Menu-driven program to check triangle types.
 
 #include <stdio.h>
+
 int main() {
     int choice;
     float a, b, c;
-    do {
-        printf("\nMenu:\n");
-        printf("1. Check Isosceles Triangle\n");
-        printf("2. Check Right Angled Triangle\n");
-        printf("3. Check Equilateral Triangle\n");
-        printf("4. Exit\n");
-        printf("Enter your choice: ");
-        scanf("%d", &choice);
-        if (choice != 4) {
-            printf("Enter lengths of three sides: ");
-            scanf("%f %f %f", &a, &b, &c);
-        }
-        switch (choice) {
-            case 1:
-                if (a == b || b == c || a == c)
-                    printf("The triangle is isosceles.\n");
-                else
-                    printf("The triangle is not isosceles.\n");
-                break;
-            case 2:
-                if (a * a + b * b == c * c || 
-                    b * b + c * c == a * a || 
-                    c * c + a * a == b * b)
-                    printf("The triangle is right angled.\n");
-                else
-                    printf("The triangle is not right angled.\n");
-                break;
-            case 3:
-                if (a == b && b == c)
-                    printf("The triangle is equilateral.\n");
-                else
-                    printf("The triangle is not equilateral.\n");
-                break;
-            case 4:
-                printf("Exiting...\n");
-                break;
-            default:
-                printf("Invalid choice.\n");
-        }
-    } while (choice != 4);
+
+    // Display the menu
+    printf("\nMenu:\n");
+    printf("1. Check Isosceles Triangle\n");
+    printf("2. Check Right Angled Triangle\n");
+    printf("3. Check Equilateral Triangle\n");
+    printf("4. Exit\n");
+    printf("Enter your choice: ");
+    scanf("%d", &choice);
+
+    // Check exit condition
+    if (choice == 4) {
+        printf("Exiting...\n");
+        return 0; // Exit the program
+    }
+
+    // Input the lengths of the triangle sides
+    printf("Enter lengths of three sides: ");
+    scanf("%f %f %f", &a, &b, &c);
+
+    // Determine the type of triangle based on user choice
+    switch (choice) {
+        case 1:
+            if (a == b || b == c || a == c)
+                printf("The triangle is isosceles.\n");
+            else
+                printf("The triangle is not isosceles.\n");
+            break;
+        case 2:
+            if (a * a + b * b == c * c || 
+                b * b + c * c == a * a ||
+                c * c + a * a == b * b)
+                printf("The triangle is right angled.\n");
+            else
+                printf("The triangle is not right angled.\n");
+            break;
+        case 3:
+            if (a == b && b == c)
+                printf("The triangle is equilateral.\n");
+            else
+                printf("The triangle is not equilateral.\n");
+            break;
+        default:
+            printf("Invalid choice.\n");
+    }
 
     return 0;
 }
-
 
 🖥️ Sample Output:
 Menu:
@@ -285,16 +295,16 @@ int main() {
     printf("Enter electricity units used: ");
     scanf("%d", &units);
     switch (units / 100) {
-        case 0: // for first 50 units
+        case 0: 
             bill = units * 0.50;
             break;
-        case 1: // for next 100 units
+        case 1: 
             bill = 50 * 0.50 + (units - 50) * 0.75;
             break;
-        case 2: // for next 100 units
+        case 2:
             bill = 50 * 0.50 + 100 * 0.75 + (units - 150) * 1.20;
             break;
-        default: // for units above 250
+        default: 
             bill = 50 * 0.50 + 100 * 0.75 + 100 * 1.20 + (units - 250) * 1.50;
             break;
     }
