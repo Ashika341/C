@@ -12,7 +12,7 @@
 
 03   Write a C program to calculate exponent (a^b) using recursion	                    Direct, Tail Recursion
 
-04	  Write a C program to generate Fibonacci Series using recursion	                     Tree, Non-Tail Recursion
+04	 Write a C program to generate Fibonacci Series using recursion	                     Tree, Non-Tail Recursion
 
 05  	Write a C program to implement Indirect Recursion using two functions	            Indirect Recursion
 
