@@ -6,11 +6,11 @@
 
 🔢 S.No	🔍  Problem Statement	🔁                                                               Type of Recursion
 
-01	       Write a C program to find Factorial using recursion         	                     Direct, Non-Tail Recursion
+01	     Write a C program to find Factorial using recursion         	                     Direct, Non-Tail Recursion
 
-02       	Write a C program to find GCD of two numbers using recursion       	                Direct, Tail Recursion
+02      Write a C program to find GCD of two numbers using recursion       	                Direct, Tail Recursion
 
-03       	Write a C program to calculate exponent (a^b) using recursion	                       Direct, Tail Recursion
+03       Write a C program to calculate exponent (a^b) using recursion	                       Direct, Tail Recursion
 
 04	      Write a C program to generate Fibonacci Series using recursion	                     Tree, Non-Tail Recursion
 
