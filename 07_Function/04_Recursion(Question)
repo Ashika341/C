@@ -6,18 +6,18 @@
 
 🔢 S.No	🔍  Problem Statement	🔁                                                               Type of Recursion
 
-01	     Write a C program to find Factorial using recursion         	                     Direct, Non-Tail Recursion
+01	  Write a C program to find Factorial using recursion         	                     Direct, Non-Tail Recursion
 
-02      Write a C program to find GCD of two numbers using recursion       	                Direct, Tail Recursion
+02   Write a C program to find GCD of two numbers using recursion       	             Direct, Tail Recursion
 
-03       Write a C program to calculate exponent (a^b) using recursion	                       Direct, Tail Recursion
+03   Write a C program to calculate exponent (a^b) using recursion	                    Direct, Tail Recursion
 
-04	      Write a C program to generate Fibonacci Series using recursion	                     Tree, Non-Tail Recursion
+04	  Write a C program to generate Fibonacci Series using recursion	                     Tree, Non-Tail Recursion
 
-05      	Write a C program to implement Indirect Recursion using two functions	                Indirect Recursion
+05  	Write a C program to implement Indirect Recursion using two functions	            Indirect Recursion
 
-06      	Write a C program to demonstrate Linear Recursion by summing N numbers              	Linear Recursion
+06    Write a C program to demonstrate Linear Recursion by summing N numbers              Linear Recursion
 
-07      	Write a C program to demonstrate Tree Recursion using Fibonacci logic               	Tree Recursion
+07    Write a C program to demonstrate Tree Recursion using Fibonacci logic               Tree Recursion
 
-08      	Write a C program to check if a string is a Palindrome using recursion              	Direct, Linear Recursion
+08    Write a C program to check if a string is a Palindrome using recursion              Direct, Linear Recursion
