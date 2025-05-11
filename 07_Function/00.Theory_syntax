@@ -7,6 +7,14 @@
 🔹 What is a Function in C?
      👉A function in C is a block of code designed to perform a specific task. It allows for code reuse, better organization, and modularity. Functions help break down complex programs into smaller, manageable chunks of code, making it easier to maintain and understand.
 
+
+
+Types of Function:
+1.Library Function  [printf(),scanf()}
+2.User-Defined Function
+
+
+
 🔸 1. Function Declaration (Prototype)
     📥 A function declaration tells the compiler about the function's name, return type, and parameters. It gives the compiler the information it needs to call the function correctly.
 
@@ -89,7 +97,7 @@ int main() {
 
 
 
-🔸 6. Function with Return Value
+🔸 6. Function  without Parameter and with Return Value
   📥 A function can return a value after completing its task. The return value is typically captured in a variable in the calling function.
 
 Example:
@@ -109,7 +117,7 @@ int main() {
 
 
 
-🔸 7. Function without Return Value
+🔸 7. Function withoutParameter and without  Return Value
   📥 A function can also not return any value, in which case the return type is void.
 
 Example:
@@ -128,101 +136,97 @@ int main() {
 
 
 
-📘8.  What is Recursion?
-Recursion is a process in which a function calls itself directly or indirectly to solve a problem.
+🔁 Function Concepts: Call by Value vs Call by Reference in C
+🔹📘 THEORY
+🧩 What is Call by Value?
+👉 When actual values of arguments are copied into the function’s formal parameters.
+👉 Changes made inside the function do not reflect in the original variables.
 
-🔶 01. Direct Recursion
-A function calls itself directly.
-void fun() {
-    // some code
-    fun();  // Direct call to itself
+
+
+🧩 What is Call by Reference?
+👉 Instead of passing actual values, addresses of variables are passed.
+👉 Changes made inside the function do affect the original variables.
+👉 Implemented using pointers in C.
+
+
+
+🔹💡 EXAMPLE 1: Call by Value
+📄 Question: Write a program to swap two numbers using Call by Value.
+
+✅ Answer:
+
+#include <stdio.h>
+void swap(int a, int b) {
+    int temp = a;
+    a = b;
+    b = temp;
+    printf("Inside swap() -> a = %d, b = %d\n", a, b);
 }
-🟩 Example:
+int main() {
+    int x = 10, y = 20;
+    printf("Before swap() -> x = %d, y = %d\n", x, y);
+    swap(x, y);
+    printf("After swap() -> x = %d, y = %d\n", x, y);
 
-void countdown(int n) {
-    if (n == 0) return;
-    printf("%d ", n);
-    countdown(n - 1);
-}
-
-
-
-🔶 02. Indirect Recursion
-A function calls another function, and that function calls the first function again.
-
-void A() {
-    B(); // A calls B
-}
-void B() {
-    A(); // B calls A
-}
-🟩 Example:
-
-void funA(int n);
-void funB(int n);
-
-void funA(int n) {
-    if (n > 0) {
-        printf("%d ", n);
-        funB(n - 1);
-    }
-}
-void funB(int n) {
-    if (n > 0) {
-        printf("%d ", n);
-        funA(n / 2);
-    }
+    return 0;
 }
 
 
-🔶 03. Tail Recursion
-The recursive call is the last statement in the function.
 
-void tail(int n) {
-    if (n == 0) return;
-    printf("%d ", n);
-    tail(n - 1);  // Last operation
+
+🧾 Sample Output:
+
+Before swap() -> x = 10, y = 20
+Inside swap() -> a = 20, b = 10
+After swap() -> x = 10, y = 20
+
+🎯 Conclusion:
+🔸 Swapping inside the function does not affect original values → Call by Value
+
+
+
+
+🔹💡 EXAMPLE 2: Call by Reference
+📄 Question: Write a program to swap two numbers using Call by Reference.
+
+✅ Answer:
+
+#include <stdio.h>
+void swap(int *a, int *b) {
+    int temp = *a;
+    *a = *b;
+    *b = temp;
+    printf("Inside swap() -> *a = %d, *b = %d\n", *a, *b);
 }
-🟢 Optimized by compiler → Similar to loops.
-
-
-
-
-
-🔶 04. Non-Tail Recursion
-The recursive call is not the last statement; there is some operation after it.
-
-void nonTail(int n) {
-    if (n == 0) return;
-    nonTail(n - 1);  // Not the last operation
-    printf("%d ", n);  // Executed after recursion
+int main() {
+    int x = 10, y = 20;
+    printf("Before swap() -> x = %d, y = %d\n", x, y);
+    swap(&x, &y);
+    printf("After swap() -> x = %d, y = %d\n", x, y);
+    return 0;
 }
-🛑 Not optimized like tail recursion → Uses more stack space.
+🧾 Sample Output:
+
+Before swap() -> x = 10, y = 20
+Inside swap() -> *a = 20, *b = 10
+After swap() -> x = 20, y = 10
+
+
+🎯 Conclusion:
+🔸 Swapping affects original variables → Call by Reference (via pointers)
 
 
 
 
 
-🔶 05. Linear Recursion
-Only one recursive call is made in each function activation.
-
-void linear(int n) {
-    if (n == 0) return;
-    linear(n - 1);
-    printf("%d ", n);
-}
-✅ Simplest form of recursion.
+🔹📌 DIFFERENCE TABLE
+Feature	                Call by Value  	    Call by Reference
+What is passed?	     Actual value	         Address (reference)
+Affect on original?	     ❌ No	              ✅ Yes
+Memory used?	         Separate copies	         Shared memory via address
+Use of pointers?	    ❌ Not needed            ✅ Required
 
 
 
 
-🔶 06. Tree Recursion
-Function calls itself more than once in a single function activation.
-
-void tree(int n) {
-    if (n == 0) return;
-    printf("%d ", n);
-    tree(n - 1);
-    tree(n - 1);
-}
-⚠️ Exponential growth in function calls → Used in problems like Fibonacci.
