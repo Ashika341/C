@@ -5,7 +5,8 @@
 
 
 📦 Variables in C (Quick Notes)
-Variable = Named memory location for storing changeable data.
+Variable = Named memory location for store data that can be modified during execution.
+It allows you to store different types of data 
 
 🛠️ Declaration
  👉 Declare before use with data type and name.
@@ -26,10 +27,6 @@ Local: Inside functions → limited access
 Global: Outside functions → accessible everywhere
 
 
-⏳ Lifetime
-Local: Exists during function execution
-Global: Exists throughout the program
-
 
 ✍️ Naming Rules
 Start with letter or _
@@ -37,11 +34,12 @@ Use letters, digits, _ only
 Case-sensitive
 
 
-✅ Best Practices
-Use descriptive names
-Initialize variables
-Use const for constants:
-const int MAX = 100;
+✅ Types of Variable
+a.Local
+b.Global
+c.Static - intialized only once and preserve the value till the wnd of the program 
+d.automatic 
+e.external 
 
 
 🧠 Memory Storage
