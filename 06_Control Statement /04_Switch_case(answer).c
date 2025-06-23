@@ -13,14 +13,45 @@ int main() {
     printf("Enter month number (1-12): ");
     scanf("%d", &month);
     
-    if (month < 1 || month > 12) {
-        printf("Invalid month number.\n");
-    } else if (month == 2) {
-        printf("February has 28 or 29 days (depending on leap year).\n");
-    } else if (month == 4 || month == 6 || month == 9 || month == 11) {
-        printf("30 days in month %d.\n", month);
-    } else {
-        printf("31 days in month %d.\n", month);
+    switch (month) {
+        case 1:
+            printf("31 days in month 1.\n");
+            break;
+        case 2:
+            printf("February has 28 or 29 days (depending on leap year).\n");
+            break;
+        case 3:
+            printf("31 days in month 3.\n");
+            break;
+        case 4:
+            printf("30 days in month 4.\n");
+            break;
+        case 5:
+            printf("31 days in month 5.\n");
+            break;
+        case 6:
+            printf("30 days in month 6.\n");
+            break;
+        case 7:
+            printf("31 days in month 7.\n");
+            break;
+        case 8:
+            printf("31 days in month 8.\n");
+            break;
+        case 9:
+            printf("30 days in month 9.\n");
+            break;
+        case 10:
+            printf("31 days in month 10.\n");
+            break;
+        case 11:
+            printf("30 days in month 11.\n");
+            break;
+        case 12:
+            printf("31 days in month 12.\n");
+            break;
+        default:
+            printf("Invalid month number.\n");
     }
 
     return 0;
